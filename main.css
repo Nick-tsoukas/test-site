@@ -1,0 +1,97 @@
+
+body {
+  overflow:hidden;
+  background: #CDDDED;
+
+}
+nav ul {
+  height: 75px;
+  margin: 0;
+  position:absolute ;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: white;
+  padding-left: 50px
+}
+
+nav li {
+  list-style: none;
+  margin-right:20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap:100px;
+  padding: 0 100px 0 100px;
+  transition: all 1s ease-in-out;
+  /*transition: transform 3s;*/
+  /*-webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateY(50em) translateZ(0);*/
+
+  transition: all 1s;
+
+  position: relative;
+  top: 2000px
+}
+
+.trans {
+  /*transform:translateY(10em);*/
+  top: 30vh;
+  transition: all 1s ease-in-out;
+}
+
+.grid > div {
+  min-height: 50vh;
+  transition: all 1s ease-in-out;
+
+
+}
+
+div > .thumb {
+  background-image: url(./images/dog03.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  align-items: center;
+  width: auto;
+  /*padding-bottom: 60%;*/
+}
+
+
+.card {
+  display: grid;
+  grid-template-rows: 1.9fr 1fr 1fr 1fr;
+  min-height: 100%;
+  width: 100%;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.card > div:not(:first-child) {
+  margin:0px 20px 0px 20px ;
+}
+
+ .active {
+  position: relative;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px !important;
+  transition: all 1s ease-in-out;
+}
+.grid > div:hover {
+   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.grid > div.card:hover {
+  transform: scale(1.03, 1.03);
+}
+
+.grid > div:hover::after {
+  opacity: 1;
+}
